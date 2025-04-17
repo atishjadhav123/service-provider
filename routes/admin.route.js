@@ -10,7 +10,7 @@ const router = require("express").Router()
 
 router
     .post("/add-professinal", adminProtected, addProfessinal)
-    .post("/add-agency", adminProtected, addAgency)
+    .post("/add-agency", addAgency)
     .get("/getallProfessinal", getAllProfessinal)
     .get("/getallagency", adminProtected, getAllAgency)
     .get("/getallcustomer", adminProtected, getAllCustomer)

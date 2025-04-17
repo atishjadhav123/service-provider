@@ -16,11 +16,12 @@ app.use(cors({ credentials: true, origin: "http://localhost:5173" }))
 
 app.use("/api/auth", require("./routes/auth.route"))
 app.use("/api/admin", require("./routes/admin.route"))
-app.use("/api/agency", require("./routes/agency.route"))
 app.use("/api/pro", require("./routes/professinal.router"))
-app.use("/api/booking", require("./routes/booking.route"))
+app.use("/api/agency", require("./routes/agency.route"))
 app.use("/api/customer", require("./routes/customer.route"))
 app.use("/api/contact", require("./routes/contact.route"))
+app.use("/api/booking", require("./routes/booking.route"))
+
 
 app.use("*", (req, res) => {
     res.status(404).json({ message: `route not found ${req.method}:${req.url}` })

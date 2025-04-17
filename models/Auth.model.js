@@ -8,5 +8,4 @@ const authSchema = new mongoose.Schema({
     role: { type: String, enum: ["admin", "customer", "agency", "electrician", "plumber", "painter"] },
     role: { type: String, default: "admin" },
 }, { timestamps: true })
-
 module.exports = mongoose.model("auth", authSchema)

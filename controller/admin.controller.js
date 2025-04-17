@@ -92,6 +92,7 @@ exports.addAgency = asyncHandler(async (req, res) => {
 
 exports.getAllProfessinal = asyncHandler(async (req, res) => {
     const result = await ProfessinalModel.find()
+    console.log(result)
     res.json({ message: "All professinal fetch success", result })
 })
 exports.getAllAgency = asyncHandler(async (req, res) => {
